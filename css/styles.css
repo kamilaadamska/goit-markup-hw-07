@@ -1,20 +1,5 @@
 /* General styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  color: $primaryFontColor;
-}
 
-h1,
-h2,
-h3,
-h4,
-p,
-ul,
-figure {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -26,14 +11,14 @@ figure {
   color: $primaryFontColor;
 }
 /* Header styles */
-.header-box {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 25px;
   padding-bottom: 24px;
 }
-.left-nav-box {
+.main-nav {
   display: flex;
   gap: 93px;
   align-items: center;
@@ -45,14 +30,14 @@ figure {
   letter-spacing: 0.03em;
   color: $logoColor;
 }
-.logo-color {
+.logo--color-accent {
   color: $colorAccent;
 }
 .header-border {
   border-bottom: 1px solid #ececec;
 }
-.header-menu,
-.header-contact-menu {
+.main-nav__list,
+.header__contact-list {
   list-style-type: none;
   font-weight: 500;
   font-size: 14px;
@@ -60,35 +45,35 @@ figure {
   display: flex;
   align-items: center;
 }
-.header-menu {
+.main-nav__list {
   gap: 46px;
 }
-.header-contact-menu {
+.header__contact-list {
   gap: 50px;
 }
-.contact-details {
+.header__contact-details {
   color: $secondaryFontColor;
   display: flex;
   align-items: center;
 }
-.contact-icon {
+.header__contact-details--icon-margin {
   margin-right: 10px;
 }
-.link-selected,
+.link--selected,
 .footer-address {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.link-selected:hover,
-.link-selected:focus,
+.link--selected:hover,
+.link--selected:focus,
 .footer-address:hover,
 .footer-address:focus {
   color: $colorAccent;
 }
-.is-active {
+.main-nav__list--link-is-active {
   color: $colorAccent;
   position: relative;
 }
-.is-active::after {
+.main-nav__list--link-is-active::after {
   content: '';
   display: block;
   width: 100%;
@@ -111,7 +96,7 @@ figure {
   background-position: center;
   background-repeat: no-repeat;
 }
-.header-primary {
+.hero__header {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -121,13 +106,13 @@ figure {
   color: $baseColor;
   margin-bottom: 30px;
 }
-.hero-box {
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 200px calc((1200px - 696px) / 2);
 }
-.main-button {
+.button {
   background: $colorAccent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -142,11 +127,11 @@ figure {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-box .main-button {
+.hero .button {
   padding: 10px 41px;
 }
-.main-button:hover,
-.main-button:focus {
+.button:hover,
+.button:focus {
   background-color: $lightColorAccent;
   color: $colorAccent;
   fill: $colorAccent;
@@ -182,7 +167,7 @@ figure {
   border-radius: 4px;
   padding: 40px;
 }
-.exit-button {
+.modal-window__exit-button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -196,11 +181,11 @@ figure {
   justify-content: center;
   cursor: pointer;
 }
-.form-box {
+.modal-window__form-box {
   display: flex;
   flex-direction: column;
 }
-.form-header {
+.modal-window__form-header {
   font-weight: 700;
   font-size: 20px;
   text-align: center;
@@ -208,34 +193,32 @@ figure {
   color: $primary-font-color;
   margin-bottom: 12px;
 }
-.form-box label {
+.modal-window__form-box label {
   font-size: 12px;
   letter-spacing: 0.01em;
   color: $secondaryFontColor;
   margin-bottom: 4px;
 }
-.form-icon-box {
+.modal-window__form-box--position {
   position: relative;
 }
-.user-icon {
+.modal-window__icon {
   position: absolute;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-window__user-icon {
   top: 13.26px;
   left: 14.27px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.phone-icon {
-  position: absolute;
+.modal-window__phone-icon {
   top: 14px;
   left: 15px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mail-icon {
-  position: absolute;
+.modal-window__mail-icon {
   top: 14px;
   left: 13.5px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.ordering-form-input {
+.modal-window__input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -244,17 +227,17 @@ figure {
   padding-left: 42px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.ordering-form-input:focus,
-.form-box textarea:focus {
+.modal-window__input:focus,
+.modal-window__form-box .modal-window__textarea:focus {
   outline: 0;
   border-color: $colorAccent;
 }
-.ordering-form-input:focus + .mail-icon,
-.ordering-form-input:focus + .phone-icon,
-.ordering-form-input:focus + .user-icon {
+.modal-window__input:focus + .modal-window__mail-icon,
+.modal-window__input:focus + .modal-window__phone-icon,
+.modal-window__input:focus + .modal-window__user-icon {
   fill: $colorAccent;
 }
-.form-box textarea {
+.modal-window__form-box .modal-window__textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
@@ -263,21 +246,21 @@ figure {
   margin-bottom: 20px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-box textarea::placeholder {
+.modal-window__form-box .modal-window__textarea::placeholder {
   font-size: 12px;
   color: rgba(117, 117, 117, 0.5);
 }
-.checkbox-container {
+.modal-window__checkbox-container {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
   position: relative;
 }
-.checkbox-input {
+.modal-window__checkbox-container--input-opacity {
   opacity: 0;
 }
-.accepted-terms {
+.modal_window__accepted-terms {
   fill: $baseColor;
   background-color: $colorAccent;
   border-radius: 2px;
@@ -287,23 +270,23 @@ figure {
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.checkbox-input:checked + .accepted-terms {
+.modal-window__checkbox-container--input-opacity:checked + .modal_window__accepted-terms {
   opacity: 1;
 }
-.not-accepted-terms {
+.modal_window__not-accepted-terms {
   position: absolute;
   transform: translate(-125%, 25%);
 }
-.checkbox-container label {
+.modal-window__checkbox-container .modal-window__checkbox-label {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: $secondaryFontColor;
 }
-.checkbox-container label span {
+.modal-window__checkbox-label .modal-window__checkbox-label--text-margin {
   margin-left: 7px;
 }
-.checkbox-container label a {
+.modal-window__checkbox-label .modal-window__checkbox-label--link-color {
   color: $colorAccent;
 }
 /* What we do */
