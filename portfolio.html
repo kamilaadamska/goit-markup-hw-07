@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - WebStudio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header-border">
+      <div class="container header-box">
+        <div class="left-nav-box">
+          <a class="link logo" href="index.html"><span class="logo-color">Web</span>Studio</a>
+          <nav>
+            <ul class="header-menu">
+              <li><a class="link link-selected" href="index.html">Agencja</a></li>
+              <li><a class="link link-selected is-active" href="portfolio.html">Portfolio</a></li>
+              <li><a class="link link-selected" href="#contact">Kontakt</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <ul class="header-contact-menu">
+            <li>
+              <a class="link link-selected contact-details" href="mailto:info@devstudio.com"
+                ><svg class="contact-icon" width="16px" height="12px">
+                  <use href="images/icons.svg#icon-envelope"></use></svg
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="link link-selected contact-details" href="tel:+48111111111"
+                ><svg class="contact-icon" width="10px" height="16px">
+                  <use href="images/icons.svg#icon-smartphone"></use></svg
+                >+48 111 111 111</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section">
+        <div class="container">
+          <ul class="buttons-list">
+            <li><button type="button">Wszystkie</button></li>
+            <li><button type="button">Strony</button></li>
+            <li><button type="button">Aplikacje</button></li>
+            <li><button type="button">Dizajn</button></li>
+            <li><button type="button">Marketing</button></li>
+          </ul>
+          <ul class="projects-gallery">
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/technocrack.jpg"
+                    alt="Projekt strony internetowej Technocrack"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Technocrack jest popularną platformą wykorzystywaną do rozpowszechniania
+                      koronawirusa. Firmy wykorzystują tę platformę do celów szpiegowskich i ataków
+                      na niezabezpieczone serwery konkurencji.
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Technocrack</h4>
+                  <span>Strona internetowa</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/basketball_match.jpg"
+                    alt="Grafika meczu New Orlean vs Golden Star"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Grafika New Orlean vs Golden Star</h4>
+                  <span>Dizajn</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/seafood.jpg"
+                    alt="Logo aplikacji dla restauracji Seafood"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Restauracja Seafood</h4>
+                  <span>Aplikacja</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/prime.jpg"
+                    alt="Słuchawki"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Projekt Prime</h4>
+                  <span>Marketing</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/boxes.jpg"
+                    alt="Kartonowe pudełka"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Projekt Boxes</h4>
+                  <span>Aplikacja</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/website.jpg"
+                    alt="Monitor z projektem strony internetowej"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Inspiration has no Borders</h4>
+                  <span>Strona internetowa</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/magazine.jpg"
+                    alt="Otwarty magazyn Limited Edition"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Magazyn Limited Edition</h4>
+                  <span>Dizajn</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/lab.jpg"
+                    alt="Metka z projektem LAB"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Projekt LAB</h4>
+                  <span>Marketing</span>
+                </figcaption>
+              </figure>
+            </li>
+            <li class="project-card">
+              <figure>
+                <div class="project-img-box">
+                  <img
+                    src="images/portfolio_projects/growing_business.jpg"
+                    alt="Laptop ze stroną aplikacji Growing Business"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="project-img-box-overlay">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem culpa tempora
+                      dolor quos aliquid ipsam nostrum labore ea blanditiis cum. Officiis nostrum
+                      iste dolorum iure modi, eum sunt ab consequatur?
+                    </p>
+                  </div>
+                </div>
+                <figcaption>
+                  <h4>Growing Business</h4>
+                  <span>Aplikacja</span>
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="footer-color">
+      <div class="container footer-box">
+        <div>
+          <a class="link logo footer-logo" href="index.html"
+            ><span class="logo-color">Web</span>Studio</a
+          >
+          <address id="contact">
+            <ul class="address-list">
+              <li>
+                <a
+                  class="link footer-address"
+                  href="https://goo.gl/maps/5vognSmDPYiszCNh9"
+                  target="_blank"
+                  >m. Warszawa, Aleje Jerozolimskie 21</a
+                >
+              </li>
+              <li>
+                <a class="link footer-address footer-contact-details" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="link footer-address footer-contact-details" href="tel:+48111111111"
+                  >+48 111 111 111</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div>
+          <span class="footer-element-header">Dołącz do nas</span>
+          <ul class="footer-social-media">
+            <li class="social-media-icon footer-icon-color">
+              <svg width="20px" height="20px">
+                <use href="images/icons.svg#icon-instagram-2"></use>
+              </svg>
+            </li>
+            <li class="social-media-icon footer-icon-color">
+              <svg width="20px" height="20px">
+                <use href="images/icons.svg#icon-twitter-1"></use>
+              </svg>
+            </li>
+            <li class="social-media-icon footer-icon-color">
+              <svg width="20px" height="20px">
+                <use href="images/icons.svg#icon-facebook-1"></use>
+              </svg>
+            </li>
+            <li class="social-media-icon footer-icon-color">
+              <svg width="20px" height="20px">
+                <use href="images/icons.svg#icon-linkedin-1"></use>
+              </svg>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <form name="newsletter-subscribe">
+            <label class="footer-element-header" for="user-email">Zapisz się do newslettera</label>
+            <div class="newsletter-form-elements">
+              <input
+                class="footer-input"
+                type="email"
+                id="user-email"
+                name="user-email"
+                placeholder="E-mail"
+                required
+              />
+              <button class="main-button footer-button" type="submit">
+                <span>Zapisz się</span>
+                <svg width="24px" height="24px">
+                  <use href="images/icons.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
