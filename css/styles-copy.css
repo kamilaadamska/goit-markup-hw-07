@@ -1,9 +1,21 @@
 /* General styles */
 body {
   font-family: 'Roboto', sans-serif;
-  color: $primaryFontColor;
+  color: var(--header-color);
 }
-
+:root {
+  --header-color: #212121;
+  --description-color: #757575;
+  --selection-color: #2196f3;
+  --background-color: #e5e5e5;
+  --section-dark-color: #2f303a;
+  --section-light-color: #f5f4fa;
+  --brand-color-white: #fff;
+  --brand-color-black: #000;
+  --projects-gallery-color: #eeeeee;
+  --parent-color: currentColor;
+  --social-media: #afb1b8;
+}
 h1,
 h2,
 h3,
@@ -23,7 +35,7 @@ figure {
 }
 .link {
   text-decoration: none;
-  color: $primaryFontColor;
+  color: var(--header-color);
 }
 /* Header styles */
 .header-box {
@@ -43,10 +55,10 @@ figure {
   font-weight: 700;
   font-size: 26px;
   letter-spacing: 0.03em;
-  color: $logoColor;
+  color: var(--brand-color-black);
 }
 .logo-color {
-  color: $colorAccent;
+  color: var(--selection-color);
 }
 .header-border {
   border-bottom: 1px solid #ececec;
@@ -67,7 +79,7 @@ figure {
   gap: 50px;
 }
 .contact-details {
-  color: $secondaryFontColor;
+  color: var(--description-color);
   display: flex;
   align-items: center;
 }
@@ -82,10 +94,10 @@ figure {
 .link-selected:focus,
 .footer-address:hover,
 .footer-address:focus {
-  color: $colorAccent;
+  color: var(--selection-color);
 }
 .is-active {
-  color: $colorAccent;
+  color: var(--selection-color);
   position: relative;
 }
 .is-active::after {
@@ -93,7 +105,7 @@ figure {
   display: block;
   width: 100%;
   height: 4px;
-  background-color: $colorAccent;
+  background-color: var(--selection-color);
   border-radius: 2px;
   position: absolute;
   top: 45px;
@@ -118,7 +130,7 @@ figure {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: $baseColor;
+  color: var(--brand-color-white);
   margin-bottom: 30px;
 }
 .hero-box {
@@ -128,7 +140,7 @@ figure {
   padding: 200px calc((1200px - 696px) / 2);
 }
 .main-button {
-  background: $colorAccent;
+  background: var(--selection-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
@@ -137,7 +149,7 @@ figure {
   line-height: 1.88;
   text-align: center;
   letter-spacing: 0.06em;
-  color: $baseColor;
+  color: var(--brand-color-white);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -147,9 +159,9 @@ figure {
 }
 .main-button:hover,
 .main-button:focus {
-  background-color: $lightColorAccent;
-  color: $colorAccent;
-  fill: $colorAccent;
+  background-color: var(--section-light-color);
+  color: var(--selection-color);
+  fill: var(--selection-color);
 }
 .backdrop {
   background-color: rgba(0, 0, 0, 0.2);
@@ -176,7 +188,7 @@ figure {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: $baseColor;
+  background: var(--brand-color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -205,13 +217,13 @@ figure {
   font-size: 20px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: $primary-font-color;
+  color: var(--header-color);
   margin-bottom: 12px;
 }
 .form-box label {
   font-size: 12px;
   letter-spacing: 0.01em;
-  color: $secondaryFontColor;
+  color: var(--description-color);
   margin-bottom: 4px;
 }
 .form-icon-box {
@@ -247,12 +259,12 @@ figure {
 .ordering-form-input:focus,
 .form-box textarea:focus {
   outline: 0;
-  border-color: $colorAccent;
+  border-color: var(--selection-color);
 }
 .ordering-form-input:focus + .mail-icon,
 .ordering-form-input:focus + .phone-icon,
 .ordering-form-input:focus + .user-icon {
-  fill: $colorAccent;
+  fill: var(--selection-color);
 }
 .form-box textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -278,8 +290,8 @@ figure {
   opacity: 0;
 }
 .accepted-terms {
-  fill: $baseColor;
-  background-color: $colorAccent;
+  fill: var(--brand-color-white);
+  background-color: var(--selection-color);
   border-radius: 2px;
   position: absolute;
   transform: translate(-125%, 25%);
@@ -298,13 +310,13 @@ figure {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  color: $secondaryFontColor;
+  color: var(--description-color);
 }
 .checkbox-container label span {
   margin-left: 7px;
 }
 .checkbox-container label a {
-  color: $colorAccent;
+  color: var(--selection-color);
 }
 /* What we do */
 .what-we-do-list {
@@ -312,7 +324,7 @@ figure {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: $secondaryFontColor;
+  color: var(--description-color);
   display: flex;
   gap: 30px;
   margin-bottom: 94px;
@@ -322,13 +334,13 @@ figure {
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: $primary-font-color;
+  color: var(--header-color);
 }
 .what-we-do-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $lightColorAccent;
+  background-color: var(--section-light-color);
   border-radius: 4px;
   width: 270px;
   height: 120px;
@@ -358,7 +370,7 @@ figure {
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: $baseColor;
+  color: var(--brand-color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -381,7 +393,7 @@ figure {
   font-size: 16px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: $secondaryFontColor;
+  color: var(--description-color);
   display: block;
 }
 .social-media {
@@ -391,7 +403,7 @@ figure {
   justify-content: center;
   gap: 10px;
   margin-top: 16px;
-  color: $iconColor;
+  color: var(--social-media);
 }
 .social-media-icon {
   width: 44px;
@@ -405,12 +417,12 @@ figure {
 }
 .social-media-icon:hover,
 .social-media-icon:focus {
-  background-color: $colorAccent;
-  color: $baseColor;
+  background-color: var(--selection-color);
+  color: var(--brand-color-white);
   cursor: pointer;
 }
 .team-card {
-  background-color: $baseColor;
+  background-color: var(--brand-color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -423,26 +435,26 @@ figure {
   padding-bottom: 30px;
 }
 .our-team {
-  background-color: $lightColorAccent;
+  background-color: var(--section-light-color);
 }
 /* Our clients */
 .our-clients-frames {
-  border: 1px solid $iconColor;
+  border: 1px solid var(--social-media);
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  color: $iconColor;
+  color: var(--social-media);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .our-clients-frames:hover,
 .our-clients-frames:focus {
-  border: 1px solid $colorAccent;
+  border: 1px solid var(--selection-color);
   cursor: pointer;
-  color: $colorAccent;
+  color: var(--selection-color);
 }
 /* Footer styles */
 .footer-color {
-  background: $footerColor;
+  background: var(--section-dark-color);
 }
 .footer-box {
   padding-top: 60px;
@@ -452,7 +464,7 @@ figure {
   gap: 70px;
 }
 .footer-logo {
-  color: $baseColor;
+  color: var(--brand-color-white);
   display: block;
   margin-bottom: 20px;
 }
@@ -464,7 +476,7 @@ figure {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: $baseColor;
+  color: var(--brand-color-white);
   display: block;
   margin-bottom: 9px;
 }
@@ -476,7 +488,7 @@ figure {
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: $baseColor;
+  color: var(--brand-color-white);
   display: block;
   margin-bottom: 20px;
 }
@@ -485,7 +497,7 @@ figure {
   display: flex;
   gap: 10px;
   margin-right: 8px;
-  color: $baseColor;
+  color: var(--brand-color-white);
   padding-bottom: 40px;
 }
 .footer-icon-color {
@@ -499,7 +511,7 @@ figure {
   width: 358px;
   height: 50px;
   padding: 15px 16px;
-  color: $baseColor;
+  color: var(--brand-color-white);
 }
 .footer-input::placeholder {
   font-size: 16px;
@@ -509,7 +521,7 @@ figure {
 .footer-input:hover,
 .footer-input:focus,
 .footer-input:active {
-  border-color: $colorAccent;
+  border-color: var(--selection-color);
   outline: 0;
   background: none;
 }
@@ -518,7 +530,7 @@ figure {
   align-items: center;
   justify-content: center;
   gap: 24px;
-  fill: $baseColor;
+  fill: var(--brand-color-white);
   padding: 10px 28px 10px 42px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -538,7 +550,7 @@ figure {
   margin-bottom: 50px;
 }
 .buttons-list button {
-  background: $lightColorAccent;
+  background: var(--section-light-color);
   border-radius: 4px;
   border-style: none;
   font-weight: 500;
@@ -553,8 +565,8 @@ figure {
 }
 .buttons-list button:hover,
 .buttons-list button:focus {
-  color: $baseColor;
-  background-color: $colorAccent;
+  color: var(--brand-color-white);
+  background-color: var(--selection-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -576,7 +588,7 @@ figure {
 }
 .project-card figcaption {
   padding: 20px 24px;
-  border: 1px solid $projectsGalleryColor;
+  border: 1px solid var(--projects-gallery-color);
 }
 .project-img-box {
   position: relative;
@@ -601,7 +613,7 @@ figure {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.03em;
-  color: $baseColor;
+  color: var(--brand-color-white);
 }
 .project-card:hover .project-img-box-overlay,
 .project-card:focus .project-img-box-overlay {
@@ -617,5 +629,5 @@ figure {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: $secondaryFontColor;
+  color: var(--description-color);
 }
