@@ -12,8 +12,8 @@
   @include fontFormats(1.36, 44px, 0.06em);
   font-weight: 900;
   text-transform: uppercase;
-  color: $baseColor;
   text-align: center;
+  color: $baseColor;
   margin-bottom: 30px;
 }
 .hero {
@@ -22,26 +22,25 @@
   padding: 200px calc((1200px - 696px) / 2);
 }
 .button {
+  @include fontFormats(1.88, 16px, 0.06em);
+  text-align: center;
   background: $colorAccent;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-style: none;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  text-align: center;
-  letter-spacing: 0.06em;
   color: $baseColor;
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color $transitionForm, color $transitionForm;
+  &:hover,
+  &:focus {
+    background-color: $lightColorAccent;
+    color: $colorAccent;
+    fill: $colorAccent;
+  }
 }
-.hero .button {
-  padding: 10px 41px;
-}
-.button:hover,
-.button:focus {
-  background-color: $lightColorAccent;
-  color: $colorAccent;
-  fill: $colorAccent;
+.hero {
+  .button {
+    padding: 10px 41px;
+  }
 }
