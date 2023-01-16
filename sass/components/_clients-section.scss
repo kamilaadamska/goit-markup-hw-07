@@ -1,3 +1,6 @@
+.clients-list {
+  @extend .about-us-gallery;
+}
 .clients-list__item {
   border: 1px solid $iconColor;
   border-radius: 4px;

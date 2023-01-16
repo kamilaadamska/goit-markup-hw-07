@@ -1,62 +1,46 @@
 .about-us-list {
+  @extend %flexbox;
+  @include fontFormats;
   list-style-type: none;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
   color: $secondaryFontColor;
-  display: flex;
   gap: 30px;
   margin-bottom: 94px;
-}
-.about-us-list .about-us-list__title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $primary-font-color;
-}
-.about-us-list__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $lightColorAccent;
-  border-radius: 4px;
-  width: 270px;
-  height: 120px;
-  margin-bottom: 30px;
+  &__title {
+    @include fontFormats(1.14);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $primaryFontColor;
+  }
+  &__icon {
+    @extend %flexbox;
+    @include size(270px, 120px);
+    background-color: $lightColorAccent;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
 }
 .header-secondary {
-  font-size: 36px;
+  @include fontFormats(1.17, 36px);
   text-align: center;
-  letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.about-us-gallery,
-.team-list,
-.projects-gallery,
-.clients-list {
-  list-style-type: none;
-  display: flex;
+.about-us-gallery {
+  @extend %flexbox;
   gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
-.about-us-gallery .about-us-gallery__list-item {
-  position: relative;
-}
-.about-us-gallery__title {
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: $baseColor;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  background-color: rgba(47, 48, 58, 0.8);
-  position: absolute;
-  top: 224px;
+  list-style-type: none;
+  &__list-item {
+    position: relative;
+  }
+  &__title {
+    @extend %flexbox;
+    @include fontFormats(1.14);
+    @include paddings(27px, 27px);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $baseColor;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    position: absolute;
+    top: 224px;
+  }
 }

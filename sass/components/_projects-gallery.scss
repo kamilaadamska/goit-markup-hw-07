@@ -1,3 +1,6 @@
+.projects-gallery {
+  @extend .about-us-gallery;
+}
 .projects-gallery--flex-wrap {
   flex-wrap: wrap;
 }

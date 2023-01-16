@@ -1,3 +1,6 @@
+.team-list {
+  @extend .about-us-gallery;
+}
 .team-list .team-list__card-header {
   font-weight: 500;
   font-size: 16px;
