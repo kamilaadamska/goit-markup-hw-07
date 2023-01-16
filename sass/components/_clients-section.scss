@@ -1,17 +1,16 @@
 .clients-list {
   @extend .about-us-gallery;
-}
-.clients-list__item {
-  border: 1px solid $iconColor;
-  border-radius: 4px;
-  width: 170px;
-  height: 92px;
-  color: $iconColor;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-list__item:hover,
-.clients-list__item:focus {
-  border: 1px solid $colorAccent;
-  cursor: pointer;
-  color: $colorAccent;
+  &__item {
+    @include size(170px, 92px);
+    border: 1px solid $iconColor;
+    border-radius: 4px;
+    color: $iconColor;
+    transition: border $transitionForm, color $transitionForm;
+    &:hover,
+    &:focus {
+      border: 1px solid $colorAccent;
+      cursor: pointer;
+      color: $colorAccent;
+    }
+  }
 }
