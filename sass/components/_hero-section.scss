@@ -1,5 +1,8 @@
 .section {
   @include paddings(94px, 94px);
+  &--team-bg {
+    background-color: $lightColorAccent;
+  }
 }
 .background-photo {
   max-width: 1600px;
