@@ -15,6 +15,7 @@
   list-style-type: none;
 }
 .address-list__link {
+  @extend .link--selected;
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
@@ -22,6 +23,10 @@
   color: $baseColor;
   display: block;
   margin-bottom: 9px;
+}
+.address-list__link:hover,
+.address-list__link:focus {
+  color: $colorAccent;
 }
 .address-list__link--color {
   color: rgba(255, 255, 255, 0.6);

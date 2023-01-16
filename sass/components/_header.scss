@@ -1,72 +1,69 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.link {
+  text-decoration: none;
+  color: $primaryFontColor;
+  &--selected {
+    transition: color $transitionForm;
+    &:hover,
+    &:focus {
+      color: $colorAccent;
+    }
+  }
+}
 .header {
-  display: flex;
-  align-items: center;
+  @include paddings(25px, 24px);
+  @extend %flexbox;
   justify-content: space-between;
-  padding-top: 25px;
-  padding-bottom: 24px;
+  &__contact-list {
+    @extend %flexbox;
+    @include fontFormats(1.14, 14px, 0.02em);
+    list-style-type: none;
+    font-weight: 500;
+    gap: 50px;
+  }
+  &__contact-details {
+    @extend %flexbox;
+    color: $secondaryFontColor;
+    &--icon-margin {
+      margin-right: 10px;
+    }
+  }
+  &__border {
+    border-bottom: 1px solid #ececec;
+  }
 }
 .main-nav {
-  display: flex;
+  @extend %flexbox;
   gap: 93px;
-  align-items: center;
-}
-.logo {
-  font-family: 'Raleway';
-  font-weight: 700;
-  font-size: 26px;
-  letter-spacing: 0.03em;
-  color: $logoColor;
-}
-.logo--color-accent {
-  color: $colorAccent;
-}
-.header-border {
-  border-bottom: 1px solid #ececec;
-}
-.main-nav__list,
-.header__contact-list {
-  list-style-type: none;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
-}
-.main-nav__list {
-  gap: 46px;
-}
-.header__contact-list {
-  gap: 50px;
-}
-.header__contact-details {
-  color: $secondaryFontColor;
-  display: flex;
-  align-items: center;
-}
-.header__contact-details--icon-margin {
-  margin-right: 10px;
-}
-.link--selected,
-.address-list__link {
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link--selected:hover,
-.link--selected:focus,
-.address-list__link:hover,
-.address-list__link:focus {
-  color: $colorAccent;
+  &__list {
+    @extend .header__contact-list;
+    gap: 46px;
+  }
 }
 .main-nav__list--link-is-active {
   color: $colorAccent;
   position: relative;
+  &::after {
+    @include size(100%, 4px);
+    content: '';
+    display: block;
+    background-color: $colorAccent;
+    border-radius: 2px;
+    position: absolute;
+    top: 45px;
+  }
 }
-.main-nav__list--link-is-active::after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: $colorAccent;
-  border-radius: 2px;
-  position: absolute;
-  top: 45px;
+.logo {
+  @include fontFormats(1.19, 26px);
+  font-family: 'Raleway';
+  font-weight: 700;
+  color: $logoColor;
+  &--color-accent {
+    color: $colorAccent;
+  }
 }

@@ -14,7 +14,7 @@
   left: $left;
 }
 
-@mixin fontFormats($ls: 0.03em, $size: 14px, $lh: 1.7) {
+@mixin fontFormats($lh: 1.7, $size: 14px, $ls: 0.03em) {
   font-size: $size;
   letter-spacing: $ls;
   line-height: $lh;
