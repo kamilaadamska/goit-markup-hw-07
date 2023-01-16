@@ -1,0 +1,21 @@
+@mixin paddings($top, $bottom) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin positions($top, $left, $status: absolute) {
+  position: $status;
+  top: $top;
+  left: $left;
+}
+
+@mixin fontFormats($ls: 0.03em, $size: 14px, $lh: 1.7) {
+  font-size: $size;
+  letter-spacing: $ls;
+  line-height: $lh;
+}

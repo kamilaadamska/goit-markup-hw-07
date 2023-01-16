@@ -65,18 +65,20 @@
   position: relative;
 }
 .modal-window__icon {
-  position: absolute;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-window__user-icon {
+  position: absolute;
   top: 13.26px;
   left: 14.27px;
 }
 .modal-window__phone-icon {
+  position: absolute;
   top: 14px;
   left: 15px;
 }
 .modal-window__mail-icon {
+  position: absolute;
   top: 14px;
   left: 13.5px;
 }
