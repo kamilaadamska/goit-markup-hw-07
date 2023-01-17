@@ -96,12 +96,9 @@
   &__checkbox-label {
     @include fontFormats;
     color: $secondaryFontColor;
-    &--text-margin {
-      margin-left: 7px;
-    }
-    &--link-color {
-      color: $colorAccent;
-    }
+  }
+  &__checkbox-description {
+    margin-left: 7px;
   }
   &__checkbox-container {
     @extend %flexbox;
@@ -133,4 +130,7 @@
 .modal-window__input:focus + .modal-window__phone-icon,
 .modal-window__input:focus + .modal-window__user-icon {
   fill: $colorAccent;
+}
+.checkbox-description__link-color {
+      color: $colorAccent;
 }
