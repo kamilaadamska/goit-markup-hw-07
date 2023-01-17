@@ -42,6 +42,7 @@
   }
   &__form-header {
     @include fontFormats(1.15, 20px);
+    text-align: center;
     font-weight: 700;
     color: $primaryFontColor;
     margin-bottom: 12px;
@@ -92,13 +93,27 @@
       color: rgba(117, 117, 117, 0.5);
     }
   }
+  &__checkbox-label {
+    @include fontFormats;
+    color: $secondaryFontColor;
+    &--text-margin {
+      margin-left: 7px;
+    }
+    &--link-color {
+      color: $colorAccent;
+    }
+  }
   &__checkbox-container {
     @extend %flexbox;
     margin-bottom: 30px;
     position: relative;
-    &--input-opacity {
-      opacity: 0;
-    }
+  }
+  &__not-accepted-terms {
+    position: absolute;
+    transform: translate(-125%, 25%);
+  }
+  &__checkbox-input {
+    opacity: 0;
   }
   &__accepted-terms {
     fill: $baseColor;
@@ -110,26 +125,12 @@
     opacity: 0;
     transition: opacity $transitionForm;
   }
-  &__not-accepted-terms {
-    position: absolute;
-    transform: translate(-125%, 25%);
-  }
-  &__checkbox-label {
-    @include fontFormats;
-    color: $secondaryFontColor;
-    &--text-margin {
-      margin-left: 7px;
-    }
-    &--link-color {
-      color: $colorAccent;
-    }
-  }
+}
+.modal-window__checkbox-input:checked + .modal-window__accepted-terms {
+  opacity: 1;
 }
 .modal-window__input:focus + .modal-window__mail-icon,
 .modal-window__input:focus + .modal-window__phone-icon,
 .modal-window__input:focus + .modal-window__user-icon {
   fill: $colorAccent;
-}
-.modal-window__checkbox-container--input-opacity:checked + .modal_window__accepted-terms {
-  opacity: 1;
 }
