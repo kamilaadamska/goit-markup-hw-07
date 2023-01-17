@@ -1,7 +1,9 @@
+.footer-bg-color {
+  background: $footerColor;
+}
 .footer {
   @extend %flexbox;
   @include paddings(60px, 60px);
-  background: $footerColor;
   gap: 70px;
   &__logo {
     color: $baseColor;
